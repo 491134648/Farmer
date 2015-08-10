@@ -17,7 +17,7 @@ namespace Farmer.Core.Caching
         private static readonly object _syncObject = new object();
 
         /// <summary>
-        /// Get a cached item. If it's not in the cache yet, then load and cache it
+        /// 依据key值获得该缓存
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="cacheManager">Cache manager</param>

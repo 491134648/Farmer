@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeFormatter\CLikeFormat.cs" />
+    <Compile Include="CodeFormatter\CodeFormat.cs" />
+    <Compile Include="CodeFormatter\CodeFormatHelper.cs" />
+    <Compile Include="CodeFormatter\CSharpFormat.cs" />
+    <Compile Include="CodeFormatter\HighlightOptions.cs" />
+    <Compile Include="CodeFormatter\HtmlFormat.cs" />
+    <Compile Include="CodeFormatter\JavaScriptFormat.cs" />
+    <Compile Include="CodeFormatter\MshFormat.cs" />
+    <Compile Include="CommonHelper.cs" />
+    <Compile Include="DataReaderExtensions.cs" />
+    <Compile Include="Html\BBCodeHelper.cs" />
+    <Compile Include="Html\HtmlHelper.cs" />
+    <Compile Include="Html\ResolveLinksHelper.cs" />
+    <Compile Include="CodeFormatter\SourceFormat.cs" />
+    <Compile Include="CodeFormatter\TsqlFormat.cs" />
+    <Compile Include="CodeFormatter\VisualBasicFormat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

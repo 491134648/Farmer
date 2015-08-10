@@ -30,8 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +50,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbContextExtensions.cs" />
+    <Compile Include="EfDataProviderManager.cs" />
+    <Compile Include="EfRepository.cs" />
+    <Compile Include="EfStartUpTask.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FarmerObjectContext.cs" />
+    <Compile Include="IDbContext.cs" />
+    <Compile Include="Initializers\CreateCeDatabaseIfNotExists.cs" />
+    <Compile Include="Initializers\CreateTablesIfNotExist.cs" />
+    <Compile Include="Initializers\DropCreateCeDatabaseAlways.cs" />
+    <Compile Include="Initializers\DropCreateCeDatabaseIfModelChanges.cs" />
+    <Compile Include="Initializers\SqlCeInitializer.cs" />
+    <Compile Include="MappingEntity\FarmerEntityTypeConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryableExtensions.cs" />
+    <Compile Include="SqlCeDataProvider.cs" />
+    <Compile Include="SqlServerDataProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Farmer.Common\Farmer.Common.csproj">
+      <Project>{81c37743-be87-449f-a333-0fef214e018d}</Project>
+      <Name>Farmer.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Farmer.Core\Farmer.Core.csproj">
+      <Project>{2fd6679e-d476-49f6-a90c-ebefe1309361}</Project>
+      <Name>Farmer.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
