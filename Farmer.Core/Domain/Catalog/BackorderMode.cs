@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 namespace Farmer.Core.Domain
 {
     /// <summary>
-    /// Represents a backorder mode
+    /// 延期交货Represents a backorder mode
     /// </summary>
     public enum BackorderMode
     {
         /// <summary>
-        /// No backorders
+        /// 禁止延期
         /// </summary>
         NoBackorders = 0,
         /// <summary>
-        /// Allow qty below 0
+        /// 允许库存小于0
         /// </summary>
         AllowQtyBelow0 = 1,
         /// <summary>
-        /// Allow qty below 0 and notify customer
+        /// 允许库存小于0并通知
         /// </summary>
         AllowQtyBelow0AndNotifyCustomer = 2,
     }
