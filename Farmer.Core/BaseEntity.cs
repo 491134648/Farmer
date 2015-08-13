@@ -14,7 +14,7 @@ namespace Farmer.Core
         /// <summary>
         /// Gets or sets the entity identifier
         /// </summary>
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         /// <summary>
         /// 是否删除
         /// </summary>

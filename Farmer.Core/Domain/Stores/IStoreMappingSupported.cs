@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Farmer.Core.Domain
 {
     /// <summary>
-    /// 店铺映射支持
+    /// Represents an entity which supports store mapping
     /// </summary>
-    public interface IStoreMappingSupported
+    public partial interface IStoreMappingSupported
     {
+        /// <summary>
+        /// Gets or sets a value indicating whether the entity is limited/restricted to certain stores
+        /// </summary>
         bool LimitedToStores { get; set; }
     }
 }

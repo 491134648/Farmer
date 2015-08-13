@@ -10,7 +10,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the customer identifier
         /// </summary>
-        public string CustomerId { get; set; }
+        public Guid CustomerId { get; set; }
 
         /// <summary>
         /// Gets or sets the points redeemed/added
