@@ -1,3 +1,5 @@
+using System;
+
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -8,7 +10,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the product review identifier
         /// </summary>
-        public string ProductReviewId { get; set; }
+        public Guid ProductReviewId { get; set; }
 
         /// <summary>
         /// A value indicating whether a review a helpful
@@ -18,8 +20,8 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the customer identifier
         /// </summary>
-        public string CustomerId { get; set; }
-
+        public Guid CustomerId { get; set; }
+        public virtual Customer Customer { get; set; }
         /// <summary>
         /// Gets the product
         /// </summary>

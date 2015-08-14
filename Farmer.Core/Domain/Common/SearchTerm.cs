@@ -1,4 +1,5 @@
-﻿namespace Farmer.Core.Domain
+﻿using System;
+namespace Farmer.Core.Domain
 {
     /// <summary>
     /// 搜索术语记录
@@ -13,7 +14,7 @@
         /// <summary>
         /// Gets or sets the store identifier
         /// </summary>
-        public string StoreId { get; set; }
+        public Guid StoreId { get; set; }
 
         /// <summary>
         /// Gets or sets search count

@@ -18,8 +18,12 @@ namespace Nop.Core.Domain.Catalog
         /// </summary>
         Months = 20,
         /// <summary>
+        /// ¼¾½Ú
+        /// </summary>
+        Session=30,
+        /// <summary>
         /// Years
         /// </summary>
-        Years = 30,
+        Years = 40
     }
 }

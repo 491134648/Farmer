@@ -61,7 +61,7 @@ namespace Farmer.Core.Domain
                 return false;
             }
 
-            if (product.AvailableEndDateTimeUtc.HasValue && product.AvailableEndDateTimeUtc.Value < dateTime)
+            if (product.AvailableEndDateTime.HasValue && product.AvailableEndDateTime.Value < dateTime)
             {
                 return false;
             }

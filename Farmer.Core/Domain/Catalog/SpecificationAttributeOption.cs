@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -9,7 +11,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the specification attribute identifier
         /// </summary>
-        public string SpecificationAttributeId { get; set; }
+        public Guid SpecificationAttributeId { get; set; }
 
         /// <summary>
         /// Gets or sets the name

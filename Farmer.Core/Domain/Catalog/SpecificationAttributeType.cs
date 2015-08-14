@@ -1,4 +1,4 @@
-namespace Nop.Core.Domain.Catalog
+namespace Farmer.Core.Domain
 {
     /// <summary>
     /// 规格特性类型
@@ -10,11 +10,11 @@ namespace Nop.Core.Domain.Catalog
         /// </summary>
         Option = 0,
         /// <summary>
-        /// Custom text
+        /// 自定义文本
         /// </summary>
         CustomText = 10,
         /// <summary>
-        /// Custom HTML text
+        /// 自定义Html
         /// </summary>
         CustomHtmlText = 20,
         /// <summary>

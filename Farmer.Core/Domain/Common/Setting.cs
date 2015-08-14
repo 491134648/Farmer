@@ -1,4 +1,5 @@
 
+using System;
 namespace Farmer.Core.Domain
 { 
     /// <summary>
@@ -8,7 +9,7 @@ namespace Farmer.Core.Domain
     {
         public Setting() { }
         
-        public Setting(string name, string value, int storeId = 0) {
+        public Setting(string name, string value, Guid storeId ) {
             this.Name = name;
             this.Value = value;
             this.StoreId = storeId;
@@ -27,7 +28,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the store for which this setting is valid. 0 is set when the setting is for all stores
         /// </summary>
-        public string StoreId { get; set; }
+        public Guid StoreId { get; set; }
 
         public override string ToString()
         {

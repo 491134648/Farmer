@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Farmer.Core.Domain;
+using Nop.Core.Domain.Catalog;
+using Nop.Core.Domain;
 
 namespace Farmer.Core.Domain
 {
@@ -25,11 +27,11 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 产品类型
         /// </summary>
-        public int ProductTypeId { get; set; }
+        public ProductType ProductType { get; set; }
         /// <summary>
         /// 团购父类产品IdGets or sets the parent product identifier. It's used to identify associated products (only with "grouped" products)
         /// </summary>
-        public string ParentGroupedProductId { get; set; }
+        public Guid ParentGroupedProductId { get; set; }
         /// <summary>
         /// 是否禁止单个Gets or sets the values indicating whether this product is visible in catalog or search results.
         /// It's used when this product is associated to some "grouped" one
@@ -58,12 +60,12 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 产品模板
         /// </summary>
-        public int ProductTemplateId { get; set; }
+        public Guid ProductTemplateId { get; set; }
 
         /// <summary>
         /// 卖家Id
         /// </summary>
-        public string VendorId { get; set; }
+        public Guid VendorId { get; set; }
 
         /// <summary>
         /// 首页展示
@@ -133,7 +135,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 购物卡类型
         /// </summary>
-        public int GiftCardTypeId { get; set; }
+        public GiftCardType GiftCardType { get; set; }
         /// <summary>
         /// Gets or sets gift card amount that can be used after purchase. If not specified, then product price will be used.
         /// </summary>
@@ -159,7 +161,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 下载Id
         /// </summary>
-        public int DownloadId { get; set; }
+        public Guid DownloadId { get; set; }
         /// <summary>
         /// 是否无限下载
         /// </summary>
@@ -175,7 +177,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the download activation type
         /// </summary>
-        public int DownloadActivationTypeId { get; set; }
+        public DownloadActivationType DownloadActivationType { get; set; }
         /// <summary>
         /// Gets or sets a value indicating whether the product has a sample download file
         /// </summary>
@@ -202,9 +204,9 @@ namespace Farmer.Core.Domain
         /// </summary>
         public int RecurringCycleLength { get; set; }
         /// <summary>
-        /// Gets or sets the cycle period
+        /// 产品周期循环
         /// </summary>
-        public int RecurringCyclePeriodId { get; set; }
+        public RecurringProductCyclePeriod RecurringCyclePeriod { get; set; }
         /// <summary>
         /// Gets or sets the total cycles
         /// </summary>
@@ -221,7 +223,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the rental period (price for this period)
         /// </summary>
-        public int RentalPricePeriodId { get; set; }
+        public RentalPricePeriod RentalPricePeriod { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the entity is ship enabled
@@ -251,7 +253,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 税务类型
         /// </summary>
-        public int TaxCategoryId { get; set; }
+        public Guid TaxCategoryId { get; set; }
         /// <summary>
         ///电信或广告服务
         /// </summary>
@@ -260,7 +262,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 库存管理方法
         /// </summary>
-        public int ManageInventoryMethodId { get; set; }
+        public ManageInventoryMethod ManageInventoryMethod { get; set; }
         /// <summary>
         ///是否多仓库
         /// </summary>
@@ -268,7 +270,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         ///仓库名称
         /// </summary>
-        public int WarehouseId { get; set; }
+        public Guid WarehouseId { get; set; }
         /// <summary>
         ///库存数量
         /// </summary>
@@ -288,7 +290,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 低库存激活
         /// </summary>
-        public int LowStockActivityId { get; set; }
+        public LowStockActivity LowStockActivity { get; set; }
         /// <summary>
         /// 低库存通知管理员
         /// </summary>
@@ -296,7 +298,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         ///延期交货模型
         /// </summary>
-        public int BackorderModeId { get; set; }
+        public BackorderMode BackorderMode { get; set; }
         /// <summary>
         /// Gets or sets a value indicating whether to back in stock subscriptions are allowed
         /// </summary>
@@ -437,7 +439,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 有效结束时间
         /// </summary>
-        public DateTime? AvailableEndDateTimeUtc { get; set; }
+        public DateTime? AvailableEndDateTime { get; set; }
 
         /// <summary>
         /// Gets or sets a display order.
@@ -456,137 +458,6 @@ namespace Farmer.Core.Domain
         ///最近更新时间
         /// </summary>
         public DateTime UpdatedOn { get; set; }
-
-
-
-
-
-
-        /// <summary>
-        /// 产品类型
-        /// </summary>
-        public ProductType ProductType
-        {
-            get
-            {
-                return (ProductType)this.ProductTypeId;
-            }
-            set
-            {
-                this.ProductTypeId = (int)value;
-            }
-        }
-
-        /// <summary>
-        /// 延迟发货模式
-        /// </summary>
-        public BackorderMode BackorderMode
-        {
-            get
-            {
-                return (BackorderMode)this.BackorderModeId;
-            }
-            set
-            {
-                this.BackorderModeId = (int)value;
-            }
-        }
-
-        /// <summary>
-        /// 下载激活类型
-        /// </summary>
-        public DownloadActivationType DownloadActivationType
-        {
-            get
-            {
-                return (DownloadActivationType)this.DownloadActivationTypeId;
-            }
-            set
-            {
-                this.DownloadActivationTypeId = (int)value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the gift card type
-        /// </summary>
-        public GiftCardType GiftCardType
-        {
-            get
-            {
-                return (GiftCardType)this.GiftCardTypeId;
-            }
-            set
-            {
-                this.GiftCardTypeId = (int)value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the low stock activity
-        /// </summary>
-        public LowStockActivity LowStockActivity
-        {
-            get
-            {
-                return (LowStockActivity)this.LowStockActivityId;
-            }
-            set
-            {
-                this.LowStockActivityId = (int)value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the value indicating how to manage inventory
-        /// </summary>
-        public ManageInventoryMethod ManageInventoryMethod
-        {
-            get
-            {
-                return (ManageInventoryMethod)this.ManageInventoryMethodId;
-            }
-            set
-            {
-                this.ManageInventoryMethodId = (int)value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the cycle period for recurring products
-        /// </summary>
-        public RecurringProductCyclePeriod RecurringCyclePeriod
-        {
-            get
-            {
-                return (RecurringProductCyclePeriod)this.RecurringCyclePeriodId;
-            }
-            set
-            {
-                this.RecurringCyclePeriodId = (int)value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the period for rental products
-        /// </summary>
-        public RentalPricePeriod RentalPricePeriod
-        {
-            get
-            {
-                return (RentalPricePeriod)this.RentalPricePeriodId;
-            }
-            set
-            {
-                this.RentalPricePeriodId = (int)value;
-            }
-        }
-
-
-
-
-
-
         /// <summary>
         /// Gets or sets the collection of ProductCategory
         /// </summary>

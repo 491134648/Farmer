@@ -1,3 +1,4 @@
+using System;
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -8,7 +9,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the entity identifier
         /// </summary>
-        public string EntityId { get; set; }
+        public Guid EntityId { get; set; }
         
         /// <summary>
         /// Gets or sets the key group
@@ -28,7 +29,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the store identifier
         /// </summary>
-        public string StoreId { get; set; }
+        public Guid StoreId { get; set; }
         
     }
 }

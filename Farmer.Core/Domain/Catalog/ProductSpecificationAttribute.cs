@@ -1,3 +1,5 @@
+using System;
+
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -8,17 +10,17 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the product identifier
         /// </summary>
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// Gets or sets the attribute type ID
         /// </summary>
-        public int AttributeTypeId { get; set; }
+        public SpecificationAttributeType AttributeTypeId { get; set; }
 
         /// <summary>
         /// Gets or sets the specification attribute identifier
         /// </summary>
-        public int SpecificationAttributeOptionId { get; set; }
+        public Guid SpecificationAttributeOptionId { get; set; }
 
         /// <summary>
         /// Gets or sets the custom value
@@ -50,19 +52,5 @@ namespace Farmer.Core.Domain
         /// </summary>
         public virtual SpecificationAttributeOption SpecificationAttributeOption { get; set; }
 
-        /// <summary>
-        /// Gets the attribute control type
-        /// </summary>
-        public SpecificationAttributeType AttributeType
-        {
-            get
-            {
-                return (SpecificationAttributeType)this.AttributeTypeId;
-            }
-            set
-            {
-                this.AttributeTypeId = (int)value;
-            }
-        }
     }
 }

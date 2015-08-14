@@ -1,3 +1,5 @@
+using System;
+
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -6,14 +8,14 @@ namespace Farmer.Core.Domain
     public partial class ProductCategory : BaseEntity
     {
         /// <summary>
-        /// 产品分类
+        /// 产品Id
         /// </summary>
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// 分类Id
         /// </summary>
-        public string CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
 
         /// <summary>
         /// 是否特性产品

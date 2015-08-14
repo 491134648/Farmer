@@ -1,7 +1,8 @@
 
 using Farmer.Core.Domain;
+using System;
 
-namespace Nop.Core.Domain.Catalog
+namespace Farmer.Core.Domain
 {
     /// <summary>
     /// ²úÆ·Í¼
@@ -11,12 +12,12 @@ namespace Nop.Core.Domain.Catalog
         /// <summary>
         /// Gets or sets the product identifier
         /// </summary>
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// Gets or sets the picture identifier
         /// </summary>
-        public string PictureId { get; set; }
+        public Guid PictureId { get; set; }
 
         /// <summary>
         /// Gets or sets the display order

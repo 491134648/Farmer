@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Farmer.Core.Domain.Catalog
+namespace Farmer.Core.Domain
 {
     /// <summary>
     /// 特性值类型枚举

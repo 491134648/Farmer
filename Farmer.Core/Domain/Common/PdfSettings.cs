@@ -1,4 +1,5 @@
 ﻿
+using System;
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -9,7 +10,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// PDF logo picture identifier
         /// </summary>
-        public string LogoPictureId { get; set; }
+        public Guid LogoPictureId { get; set; }
 
         /// <summary>
         /// Gets or sets whether letter page size is enabled

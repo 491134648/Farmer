@@ -1,4 +1,4 @@
-using Farmer.Core.Domain;
+using System;
 
 namespace Farmer.Core.Domain
 {
@@ -10,12 +10,12 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the product identifier
         /// </summary>
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// Gets or sets the warehouse identifier
         /// </summary>
-        public string WarehouseId { get; set; }
+        public Guid WarehouseId { get; set; }
 
         /// <summary>
         /// Gets or sets the stock quantity

@@ -10,7 +10,6 @@ namespace Farmer.Core.Domain
     public partial class Category : BaseEntity, ILocalizedEntity, ISlugSupported, IAclSupported, IStoreMappingSupported
     {
         private ICollection<Discount> _appliedDiscounts;
-
         /// <summary>
         /// 类目名称
         /// </summary>
@@ -24,7 +23,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         ///类目模板Id
         /// </summary>
-        public string CategoryTemplateId { get; set; }
+        public Guid CategoryTemplateId { get; set; }
 
         /// <summary>
         /// 关键词
@@ -44,12 +43,12 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 父分类
         /// </summary>
-        public int ParentCategoryId { get; set; }
+        public Guid ParentCategoryId { get; set; }
 
         /// <summary>
         /// 图片Id
         /// </summary>
-        public string PictureId { get; set; }
+        public Guid PictureId { get; set; }
 
         /// <summary>
         /// 页面大小
@@ -113,7 +112,8 @@ namespace Farmer.Core.Domain
         /// Gets or sets the date and time of instance update
         /// </summary>
         public DateTime UpdatedOn { get; set; }
-
+        public virtual Picture Picture { get; set;}
+       
         /// <summary>
         /// 折扣优惠信息
         /// </summary>

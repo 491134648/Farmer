@@ -1,3 +1,5 @@
+using System;
+
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -8,7 +10,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 产品Id
         /// </summary>
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// 特性xml
@@ -33,7 +35,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 制造商编号
         /// </summary>
-        public string ManufacturerPartNumber { get; set; }
+        public Guid ManufacturerPartNumber { get; set; }
 
         /// <summary>
         /// Gets or sets the Global Trade Item Number (GTIN). These identifiers include UPC (in North America), EAN (in Europe), JAN (in Japan), and ISBN (for books).

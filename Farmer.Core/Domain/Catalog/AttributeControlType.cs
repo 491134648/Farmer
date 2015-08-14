@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Farmer.Core.Domain
 {
+    /// <summary>
+    /// 特性控件类型
+    /// </summary>
     public enum AttributeControlType:int
     {
         /// <summary>

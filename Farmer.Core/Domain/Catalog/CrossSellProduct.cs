@@ -1,3 +1,5 @@
+using System;
+
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -8,12 +10,12 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// ²úÆ·1
         /// </summary>
-        public string ProductId1 { get; set; }
+        public Guid ProductId1 { get; set; }
 
         /// <summary>
         /// Gets or sets the second product identifier
         /// </summary>
-        public string ProductId2 { get; set; }
+        public Guid ProductId2 { get; set; }
     }
 
 }

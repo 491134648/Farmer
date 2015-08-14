@@ -8,12 +8,6 @@ namespace Farmer.Core.Domain
         /// Gets or sets the first name
         /// </summary>
         public string FirstName { get; set; }
-
-        /// <summary>
-        /// Gets or sets the last name
-        /// </summary>
-        public string LastName { get; set; }
-
         /// <summary>
         /// Gets or sets the email
         /// </summary>
@@ -27,12 +21,12 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the country identifier
         /// </summary>
-        public string? CountryId { get; set; }
+        public Guid? CountryId { get; set; }
 
         /// <summary>
         /// Gets or sets the state/province identifier
         /// </summary>
-        public int? StateProvinceId { get; set; }
+        public Guid? StateProvinceId { get; set; }
         
         /// <summary>
         /// Gets or sets the city
@@ -85,7 +79,6 @@ namespace Farmer.Core.Domain
             var addr = new Address
             {
                 FirstName = this.FirstName,
-                LastName = this.LastName,
                 Email = this.Email,
                 Company = this.Company,
                 Country = this.Country,
@@ -99,7 +92,7 @@ namespace Farmer.Core.Domain
                 PhoneNumber = this.PhoneNumber,
                 FaxNumber = this.FaxNumber,
                 CustomAttributes = this.CustomAttributes,
-                CreatedOnUtc = this.CreatedOnUtc,
+                CreateOn = this.CreateOn,
             };
             return addr;
         }

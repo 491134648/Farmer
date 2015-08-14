@@ -8,7 +8,7 @@ namespace Farmer.Core.Domain
 {
    public partial class Affiliate:BaseEntity
     {
-        public string AddressId { get; set; }
+        public Guid AddressId { get; set; }
         /// <summary>
         /// 管理员评论
         /// </summary>

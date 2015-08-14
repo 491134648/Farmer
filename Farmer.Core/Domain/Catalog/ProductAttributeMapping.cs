@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Farmer.Core.Domain;
+using System;
 
 namespace Farmer.Core.Domain
 {
@@ -16,12 +17,12 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the product identifier
         /// </summary>
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// 产品Id
         /// </summary>
-        public string ProductAttributeId { get; set; }
+        public Guid ProductAttributeId { get; set; }
 
         /// <summary>
         /// 提示信息
@@ -36,7 +37,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the attribute control type identifier
         /// </summary>
-        public int AttributeControlTypeId { get; set; }
+        public AttributeControlType AttributeControlTypeId { get; set; }
 
         /// <summary>
         /// Gets or sets the display order
@@ -69,25 +70,6 @@ namespace Farmer.Core.Domain
         /// Gets or sets the default value (for textbox and multiline textbox)
         /// </summary>
         public string DefaultValue { get; set; }
-
-
-
-
-        /// <summary>
-        /// Gets the attribute control type
-        /// </summary>
-        public AttributeControlType AttributeControlType
-        {
-            get
-            {
-                return (AttributeControlType)this.AttributeControlTypeId;
-            }
-            set
-            {
-                this.AttributeControlTypeId = (int)value; 
-            }
-        }
-
         /// <summary>
         /// Gets the product attribute
         /// </summary>

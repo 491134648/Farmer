@@ -9,7 +9,7 @@ namespace Farmer.Core.Domain
     public partial class BlogPost:BaseEntity, ISlugSupported, IStoreMappingSupported
     {
         private ICollection<BlogComment> blogComments;
-        public string LanguageId { get; set; }
+        public Guid LanguageId { get; set; }
         /// <summary>
         /// 标题
         /// </summary>
@@ -50,6 +50,7 @@ namespace Farmer.Core.Domain
         /// 限制店铺
         /// </summary>
         public bool LimitedToStores { get; set; }
+        public virtual Language Language { get; set; }
         /// <summary>
         /// 评论内容
         /// </summary>

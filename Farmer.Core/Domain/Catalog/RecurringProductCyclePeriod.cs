@@ -3,7 +3,7 @@ namespace Farmer.Core.Domain
     /// <summary>
     /// 产品周期循环
     /// </summary>
-    public enum RecurringProductCyclePeriod
+    public enum RecurringProductCyclePeriod:int
     {
         /// <summary>
         /// Days
@@ -18,8 +18,12 @@ namespace Farmer.Core.Domain
         /// </summary>
         Months = 20,
         /// <summary>
+        /// 季度
+        /// </summary>
+        Session=30,
+        /// <summary>
         /// Years
         /// </summary>
-        Years = 30,
+        Years = 40
     }
 }

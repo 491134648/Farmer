@@ -1,3 +1,5 @@
+using System;
+
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -8,12 +10,12 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the product identifier
         /// </summary>
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// Gets or sets the manufacturer identifier
         /// </summary>
-        public string ManufacturerId { get; set; }
+        public Guid ManufacturerId { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the product is featured

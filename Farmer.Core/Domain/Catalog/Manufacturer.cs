@@ -25,7 +25,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 制造商模板
         /// </summary>
-        public string ManufacturerTemplateId { get; set; }
+        public Guid ManufacturerTemplateId { get; set; }
 
         /// <summary>
         /// 关键字
@@ -45,7 +45,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 图片
         /// </summary>
-        public string PictureId { get; set; }
+        public Guid PictureId { get; set; }
 
         /// <summary>
         /// 页面大小

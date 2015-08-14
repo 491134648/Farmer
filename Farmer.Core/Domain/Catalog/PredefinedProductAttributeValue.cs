@@ -1,4 +1,5 @@
 using Farmer.Core.Domain;
+using System;
 
 namespace Farmer.Core.Domain
 {
@@ -10,7 +11,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// 产品特性Id
         /// </summary>
-        public string ProductAttributeId { get; set; }
+        public Guid ProductAttributeId { get; set; }
 
         /// <summary>
         /// Gets or sets the product attribute name

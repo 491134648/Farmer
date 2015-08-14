@@ -1,3 +1,4 @@
+using System;
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -8,7 +9,7 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the address attribute identifier
         /// </summary>
-        public string AddressAttributeId { get; set; }
+        public Guid AddressAttributeId { get; set; }
 
         /// <summary>
         /// Gets or sets the checkout attribute name

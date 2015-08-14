@@ -10,24 +10,28 @@
         /// </summary>
         Position = 0,
         /// <summary>
-        /// Name: A to Z
+        /// 名称升序
         /// </summary>
         NameAsc = 5,
         /// <summary>
-        /// Name: Z to A
+        /// 名称降序
         /// </summary>
         NameDesc = 6,
         /// <summary>
-        /// Price: Low to High
+        ///价格升序
         /// </summary>
         PriceAsc = 10,
         /// <summary>
-        /// Price: High to Low
+        /// 价格降序
         /// </summary>
         PriceDesc = 11,
         /// <summary>
-        /// Product creation date
+        ///日期升序
         /// </summary>
-        CreatedOn = 15,
+        CreatedOnAsc = 15,
+        /// <summary>
+        /// 日期降序
+        /// </summary>
+        CreateOnDesc=16
     }
 }

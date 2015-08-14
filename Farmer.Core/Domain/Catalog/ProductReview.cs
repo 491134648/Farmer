@@ -14,12 +14,12 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the customer identifier
         /// </summary>
-        public string CustomerId { get; set; }
+        public Guid CustomerId { get; set; }
 
         /// <summary>
         /// Gets or sets the product identifier
         /// </summary>
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the content is approved

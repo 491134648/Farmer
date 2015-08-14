@@ -1,4 +1,6 @@
 
+using System;
+
 namespace Farmer.Core.Domain
 {
     /// <summary>
@@ -9,17 +11,17 @@ namespace Farmer.Core.Domain
         /// <summary>
         /// Gets or sets the product identifier
         /// </summary>
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// Gets or sets the store identifier (0 - all stores)
         /// </summary>
-        public string StoreId { get; set; }
+        public Guid StoreId { get; set; }
 
         /// <summary>
         /// Gets or sets the customer role identifier
         /// </summary>
-        public int? CustomerRoleId { get; set; }
+        public Guid? CustomerRoleId { get; set; }
 
         /// <summary>
         /// Gets or sets the quantity

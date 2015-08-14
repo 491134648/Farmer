@@ -6,7 +6,7 @@ namespace Farmer.Core.Domain
     public enum GiftCardType
     {
         /// <summary>
-        /// Virtual
+        /// ÐéÄâ
         /// </summary>
         Virtual = 0,
         /// <summary>
